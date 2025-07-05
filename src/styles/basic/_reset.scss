@@ -1,0 +1,27 @@
+// -- базовый сброс стилей
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    // отзывчивое повидение картинок
+    flex-shrink: 0;
+    // чтобы иконки не растягивались на больших экранах
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+button {
+    all: initial;
+}
+nav {
+    display: flex;
+}
+ul, li {
+    list-style: none;
+}
+// --------------
