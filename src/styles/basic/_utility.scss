@@ -27,6 +27,12 @@ padding: 0 16px;
     flex-grow: 1;
 }
 // ---------------
+// подключаем шрифт файлом: 
+@font-face {
+    font-family: "my-font-name";
+// путь к папке fonts -- ../fonts/my-font-name.woff2
+    src: url("") format("woff2"); 
+}
 body,html {
     height: auto;
     min-height: 100%;
