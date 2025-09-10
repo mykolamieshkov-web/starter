@@ -1,4 +1,8 @@
+// файл с утилитарными стилями, сюда записываються свойства тех классов, которые многоразово повторяются в проекте
+ 
+
 @use "../../styles/use/media" as media;
+// использую миксины только в утилитарных стилях:
 @use "../../styles/mixins/mixins" as mix;
 [class*="__container"] {
 width: 100%;
@@ -30,8 +34,9 @@ padding: 0 16px;
 }
 // ---------------
 // подключаем шрифт файлом: 
+// подключение шрифта через правило @font-face на примере семейства шрифтов Montserrat
 @font-face {
-    font-family: "my-font-name";
+    font-family: "Montserrat", sans-serif;
 // путь к папке fonts -- ../fonts/my-font-name.woff2
     src: url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap") format("woff2");
 }
