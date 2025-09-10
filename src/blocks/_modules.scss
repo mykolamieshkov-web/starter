@@ -1,2 +1,3 @@
-@use "modules/header/header";
-@use "modules/footer/footer";
+@use "modules/header/header" as header;
+@use "modules/footer/footer" as footer;
+@use"modules/about/about" as about;

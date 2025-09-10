@@ -1,13 +1,15 @@
-[class*="__container"] { 
+@use "../../styles/use/media" as media;
+@use "../../styles/mixins/mixins" as mix;
+[class*="__container"] {
 width: 100%;
 max-width: var(--container-max-width);
 height: auto;
 margin: 0 auto;
-padding: 0 16px; 
-@include tablet-b {
+padding: 0 16px;
+@include media.tablet-b {
     max-width: 960px;
 }
-@include tablet {
+@include media.tablet {
     max-width: none;
     
    
@@ -31,7 +33,7 @@ padding: 0 16px;
 @font-face {
     font-family: "my-font-name";
 // путь к папке fonts -- ../fonts/my-font-name.woff2
-    src: url("") format("woff2"); 
+    src: url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap") format("woff2");
 }
 body,html {
     height: auto;
@@ -39,11 +41,23 @@ body,html {
     text-align: left;
     overflow-x: hidden;
     scroll-behavior: smooth;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: 0.2px;
+  color: #737373;
+
+
+
+
+
+
     
 }
-// утилитарные классы для миксинов:
+// утилитарные классы для подклюяения миксинов:
 .btn {
-    @include btn; 
+    @include mix.btn;
 }
 // задник через html first::
 [class*="__cover"] {

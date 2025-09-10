@@ -1,6 +1,6 @@
-@use "./basic/root";
-@use "./basic/reset"; 
-@use "./basic/mobile"; 
-@use "mixins/mixins";
-// файл содержащий добавление бем-блоков:
-@use "../blocks/modules";
+@use "use/root" as root;
+@use "use/reset" as basic;
+@use "use/media" as media;
+@use "mixins/mixins" as mix;
+@use "use/utility" as utility;
+@use "../blocks/modules" as modules;

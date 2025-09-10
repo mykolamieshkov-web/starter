@@ -1,15 +1,15 @@
 // стандарная ширина полотна: 1440px, стандартная ширина ограничующего контейнера: 1200px;
 
 // ноутбуки
-$laptop: 1220px;
+$laptop: 1220px!default;
 // планшеты в книжной ориентации:
-$tablet-b: 992px;
+$tablet-b: 992px!default;
 // планшеты и смартфоны в горизонтальной ориентации:
-$tablet: 768px;
+$tablet: 768px!default;
 // большие экраны смартфонов:
-$mobile: 500px;
+$mobile: 500px!default;
 // малые экраны смартфонов:
-$mobile-s: 393px;
+$mobile-s: 393px!default;
 
 @mixin laptop {
 @media (max-width: $laptop){
