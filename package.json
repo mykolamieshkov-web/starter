@@ -5,7 +5,7 @@
     "license": "GPL-3.0-only",
     "repository": {
         "type": "git",
-        "url": "https://github.com/andreyalexeich/gulp-scss-starter.git"
+        "url": "https://github.com/mykolamieshkov-web/starter.git"
     },
     "scripts": {
         "dev": "gulp",
