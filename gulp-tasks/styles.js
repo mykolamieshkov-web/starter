@@ -4,8 +4,8 @@ import { paths } from "../gulpfile.babel";
 import gulp from "gulp";
 import gulpif from "gulp-if";
 import rename from "gulp-rename";
-import dartsass from "sass";
-import gulpsass from "gulp-sass";
+import gulpSass from "gulp-sass";
+import dartSass from "sass";
 import mincss from "gulp-clean-css";
 import groupmedia from "gulp-group-css-media-queries";
 import autoprefixer from "gulp-autoprefixer";
@@ -15,7 +15,9 @@ import browsersync from "browser-sync";
 import debug from "gulp-debug";
 import yargs from "yargs";
 
-const sass = gulpsass(dartsass);
+// ✅ Современный Sass API (единственное объявление)
+const sass = gulpSass(dartSass);
+
 const argv = yargs.argv,
     production = !!argv.production;
 
@@ -23,7 +25,12 @@ gulp.task("styles", () => {
     return gulp.src(paths.styles.src)
         .pipe(gulpif(!production, sourcemaps.init()))
         .pipe(plumber())
-        .pipe(sass())
+        .pipe(sass({
+            outputStyle: 'expanded',
+            precision: 6,
+            includePaths: ['node_modules'],
+            silenceDeprecations: ['legacy-js-api']
+        }).on('error', sass.logError))
         .pipe(groupmedia())
         .pipe(gulpif(production, autoprefixer({
             cascade: false,

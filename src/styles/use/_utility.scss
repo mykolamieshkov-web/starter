@@ -51,20 +51,23 @@ body,html {
   font-weight: 500;
   line-height: 30px;
   letter-spacing: 0.2px;
-  color: #737373;
+  color: #000000;
 
 
-
-
-
-
-    
+// ------------------------------------//   
 }
 // утилитарные классы для подклюяения миксинов:
 .btn {
     @include mix.btn;
+    // эффект нажатия на кнопку:
+transition: all 0.3s ease-in;
+ @include media.hover {
+    // background-color: transparent;
 }
-// задник через html first::
+}
+// --------------------------------------------------------
+
+// задник через html first:, в структуре BEM, сначала элемент блока с картинкой (class*="__cover"), затем элемент блока с контентной частью страницы (class*="__content")
 [class*="__cover"] {
     position: absolute; // чтоб изображение было фоном
     width: 100%;
@@ -77,4 +80,9 @@ body,html {
         object-position: top; // изображение встанет по центру
     } 
 
+}
+// чтобы контентная часть была по верх задника
+[class*="__content"] { 
+    z-index: 0; // по умолчанию,
+    position: relative;
 }
