@@ -1,10 +1,12 @@
 
 :root {
     // переменная ширины ограничивающего контейнера
-    --container-max-width: 1050px;
+    --container-max-width: 0px;
     // переменные для кнопки: 
-    --btn-max-width: 160px;
-    --btn-max-height: 45px; 
+    --btn-max-width: 0px;
+    --btn-max-height: 0px;
+    --vertical-gap: 0px; 
+    --horisontal-gap: 0px;
 
 
 }
